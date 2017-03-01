@@ -21,7 +21,7 @@ public class ReviewGrabber{
         return _rating;
     }
 
-    public double getPrice() throws Exception {
+    double getPrice() throws Exception {
         return EbayGrabber.retrievePrice();
     }
 

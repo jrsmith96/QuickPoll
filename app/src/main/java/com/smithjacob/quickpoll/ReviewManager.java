@@ -20,7 +20,11 @@ public class ReviewManager{
             temp.collectReviews(_upc);
             reviewGrabbers.add(temp);
             Ratings.add(temp.getAvgRating());
-            Prices.add(temp.getPrice());
+            try {
+                Prices.add(temp.getPrice());
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
         }
         return "grab Reviews success";
     }
