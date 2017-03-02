@@ -24,6 +24,35 @@
         android:layout_marginTop="50dp"
         android:layout_alignParentStart="true" />
 
+    <Button
+        android:id="@+id/enter_upc_manually"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Enter upc manually"
+        android:onClick="goToEnterUPC"
+        android:layout_below="@+id/barcode_result"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="17dp" />
+
+    <Button
+        android:id="@+id/import_photo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Import photo from library"
+        android:onClick="goToGallery"
+        android:layout_below="@+id/enter_upc_manually"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="14dp" />
+
+    <Button
+        android:id="@+id/history"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Show search history"
+        android:onClick="goToSearchHistory"
+        android:layout_below="@+id/import_photo"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="14dp" />
 
 
 </RelativeLayout>

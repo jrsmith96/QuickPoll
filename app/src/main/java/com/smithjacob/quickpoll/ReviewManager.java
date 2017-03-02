@@ -16,7 +16,7 @@ public class ReviewManager{
     public String grabReviews(int size){
         //boolean flag = true;
         for(int i = 0; i < size; i++){
-            ReviewGrabber temp = new fakegrabber();
+            ReviewGrabber temp = new EbayGrabber(); // Ask Letscher
             temp.collectReviews(_upc);
             reviewGrabbers.add(temp);
             Ratings.add(temp.getAvgRating());
@@ -38,7 +38,7 @@ public class ReviewManager{
             ar += tempr;
         }
         ar = ar/(double)reviewGrabbers.size();
-        ar = Math.round(ar*10/10);
+        ar = Math.round(ar*10.0)/10.0;
         return ar;
     }
 
