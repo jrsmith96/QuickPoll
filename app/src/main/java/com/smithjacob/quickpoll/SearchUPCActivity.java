@@ -5,14 +5,34 @@ import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.TextView;
 
 
 public class SearchUPCActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_search_upc);
+
+        //Bundle bundle = getIntent().getExtras();
+        //int upc = bundle.getInt("BBB");
+        ReviewManager RM = new ReviewManager(12345);
+        ReviewManager.grabReviews();
+
+        // Product Rating
+        double rt = ReviewManager.getAvgRating();
+        TextView fRating = (TextView) findViewById(R.id.productAvgRating);
+        fRating.setText(String.valueOf(rt));
+
+        // Product Price
+        double fPrice = ReviewManager.getPrices().get(0);
+
+        // Product Name
+        TextView fName = (TextView) findViewById(R.id.productName);
+        fName.setText(/*getName*/);
+
     }
 
     public void ebay(View view)

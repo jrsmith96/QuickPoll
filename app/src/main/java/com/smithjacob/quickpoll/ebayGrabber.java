@@ -76,15 +76,15 @@ public class EbayGrabber extends ReviewGrabber{
                 e.printStackTrace();
             }
 
-            try {
+            /*try {
                 // URLReader.read(galleryUrl); // Returns the URL in the form of a string.
                 URL imgUrl = new URL(galleryUrl);
                 //img = ImageIO.read(imgUrl); //Ask Letscher
             } catch (Exception e) {
                 e.printStackTrace();
             }
-
-            _product.set_Image(img);
+*/
+            _product.set_Image(galleryUrl);
         }
         try {
             _price = retrievePrice();

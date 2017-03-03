@@ -11,95 +11,73 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.smithjacob.quickpoll.SearchUPCActivity">
 
-    <ImageView
+    <TextView
+        android:id="@+id/productName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:srcCompat="@drawable/headphones"
-        android:id="@+id/imageView"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginEnd="209dp"
-        android:layout_marginBottom="322dp"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentEnd="true" />
+        android:textAppearance="@style/TextAppearance.AppCompat.Display3"
+        android:layout_alignParentTop="true" />
 
     <TextView
-        android:text="Rating"
+        android:id="@+id/productAvgRating"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/textView2"
         android:textAppearance="@style/TextAppearance.AppCompat.Display3"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_marginEnd="51dp" />
 
     <Button
-        android:text="amazonprice"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/button5"
-        android:layout_marginRight="70dp"
-        android:layout_marginTop="12dp"
-        android:layout_below="@+id/button4"
-        android:layout_alignStart="@+id/textView2"
-        android:onClick="amazon" />
-
-    <Button
-        android:text="walmartprice"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/button4"
-        android:layout_marginRight="70dp"
-        android:layout_marginTop="15dp"
-        android:layout_below="@+id/button3"
-        android:layout_alignStart="@+id/button5"
-        android:onClick="walmart" />
-
-    <Button
+        android:id="@+id/ebayButton"
         android:text="ebayprice"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/button3"
-        android:layout_below="@+id/textView2"
-        android:layout_alignStart="@+id/textView2"
+        android:layout_below="@+id/productAvgRating"
+        android:layout_marginLeft="190dp"
         android:onClick="ebay" />
 
-    <TextView
-        android:id="@+id/compressed_description2"
+    <Button
+        android:id="@+id/wmButton"
+        android:text="walmartprice"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="2dp"
-        android:ellipsize="end"
-        android:gravity="top"
-        android:lines="2"
-        android:maxLines="2"
-        android:paddingBottom="5dp"
-        android:paddingRight="7dp"
-        android:text="Description of the news, just the short paragraph, \nSignature, to see how it works if there are more than two lines hi my name is stephanie this is me trying to test if this even works I feel like it doesn't"
-        android:textColor="@android:color/black"
-        android:textSize="12sp"
-        android:typeface="sans"
-        android:layout_marginTop="16dp"
-        android:layout_below="@+id/compressed_description"
-        android:layout_alignParentEnd="true" />
+        android:layout_below="@+id/ebayButton"
+        android:layout_marginLeft="190dp"
+        android:onClick="walmart" />
+
+    <Button
+        android:id="@+id/amzButton"
+        android:text="amazonprice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/wmButton"
+        android:layout_marginLeft="190dp"
+        android:onClick="amazon" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/headphones"
+        android:id="@+id/imageView"
+        android:layout_above="@+id/amzButton"
+        android:layout_toStartOf="@+id/productAvgRating"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="28dp"
+        android:layout_marginRight="100dp"/>
 
     <TextView
-        android:id="@+id/compressed_description"
+        android:id="@+id/productDescription"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="2dp"
-        android:ellipsize="end"
-        android:gravity="top"
-        android:lines="2"
+        android:text="Description"
+        android:layout_below="@id/amzButton"/>
+
+    <TextView
+        android:id="@+id/productDescription2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:maxLines="2"
-        android:paddingBottom="5dp"
-        android:paddingRight="7dp"
-        android:text="Description of the news, just the short paragraph, \nSignature, to see how it works if there are more than two lines hi my name is stephanie this is me trying to test if this even works I feel like it doesn't"
-        android:textColor="@android:color/black"
-        android:textSize="12sp"
-        android:typeface="sans"
-        android:layout_marginTop="48dp"
-        android:layout_below="@+id/button5"
-        android:layout_alignParentEnd="true" />
+        android:text="Description 2"
+        android:layout_below="@id/productDescription" />
 
 </RelativeLayout>

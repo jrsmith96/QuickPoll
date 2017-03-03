@@ -16,13 +16,14 @@ import com.google.android.gms.vision.barcode.Barcode;
 
 public class MainActivity extends AppCompatActivity {
     TextView barcodeResult;
+
     public static final int IMAGE_GALLERY_REQUEST = 20;
     @Override
+
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-        setContentView(R.layout.activity_main); // Ask Letscher
-        barcodeResult = (TextView)findViewById(R.id.barcode_result); // Ask Letscher
+        setContentView(R.layout.activity_main);
+        barcodeResult = (TextView)findViewById(R.id.barcode_result);
     }
 
     public void scanBarcode(View v) {
