@@ -29,41 +29,40 @@
 
     <Button
         android:id="@+id/ebayButton"
-        android:text="ebayprice"
+        android:text="@string/ebay_price"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/productAvgRating"
-        android:layout_marginLeft="190dp"
+        android:layout_marginStart="190dp"
         android:onClick="ebay" />
 
     <Button
         android:id="@+id/wmButton"
-        android:text="walmartprice"
+        android:text="@string/walmart_price"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/ebayButton"
-        android:layout_marginLeft="190dp"
+        android:layout_marginStart="190dp"
         android:onClick="walmart" />
 
     <Button
         android:id="@+id/amzButton"
-        android:text="amazonprice"
+        android:text="@string/amazon_price"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/wmButton"
-        android:layout_marginLeft="190dp"
+        android:layout_marginStart="190dp"
         android:onClick="amazon" />
 
     <ImageView
+        android:id="@+id/imageView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:srcCompat="@drawable/headphones"
-        android:id="@+id/imageView"
-        android:layout_above="@+id/amzButton"
+        app:srcCompat="@drawable/ipad"
+        android:layout_above="@+id/productDescription"
         android:layout_toStartOf="@+id/productAvgRating"
-        android:layout_marginTop="50dp"
-        android:layout_marginBottom="28dp"
-        android:layout_marginRight="100dp"/>
+        android:layout_marginTop="70dp"
+        android:layout_marginEnd="100dp"/>
 
     <TextView
         android:id="@+id/productDescription"

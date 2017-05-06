@@ -33,11 +33,10 @@
         <activity
             android:name=".ScanBarcodeActivity"
             android:label="Scan Barcode" />
-        <activity android:name=".walmartActivity" />
         <activity android:name=".EnterUPCActivity" />
         <activity android:name=".SearchUPCActivity" />
         <activity android:name=".HistoryActivity" />
-        <activity android:name=".ImportPhotoActivity"></activity>
+        <activity android:name=".ImportPhotoActivity" />
     </application>
 
 </manifest>

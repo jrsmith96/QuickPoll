@@ -1,11 +1,10 @@
 package com.smithjacob.quickpoll;
 
-
 public class Review {
 	public String _customerReview;
 	public double _customerRating;
 	public int _helpfulness;
-	public String _url = null;
+	public String _url;
 	
 	public Review(String cr, double rating, int help, String url){
 		_customerReview = cr;
